@@ -52,7 +52,7 @@ begin
       if i_Bus_CS = '1' then
         if i_Bus_Wr_Rd_n = '1' then
           
-          case to_bit(i_Bus_Addr) is
+          case to_bitvector(i_Bus_Addr) is
             when "00" =>
               o_Reg_00 <= i_Bus_Wr_Data;
             when "01" =>

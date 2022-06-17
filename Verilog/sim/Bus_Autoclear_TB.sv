@@ -29,19 +29,18 @@ module Bus_Autoclear_TB ();
   Sim_Checker c1 = new("Bus_Autoclear_TB");
   
   // Instantiate UUT
-  Bus_Autoclear #(.g_AC_BITS_USED(c_AC_BITS_USED))
-  UUT(
-      .i_Bus_Clk(r_Bus_Clk),
-      .i_Bus_CS(hook.r_Bus_CS),
-      .i_Bus_Wr_Rd_n(hook.r_Bus_Wr_Rd_n),
-      .i_Bus_Addr8(hook.r_Bus_Addr8[3:0]),
-      .i_Bus_Wr_Data(hook.r_Bus_Wr_Data),
-      .o_Bus_Rd_Data(hook.r_Bus_Rd_Data),
-      .o_Bus_Rd_DV(hook.r_Bus_Rd_DV),
-      //
-      .o_Start(),
-      .i_Done(r_Done)
-      );
+  Bus_Autoclear #(.AC_BITS_USED(c_AC_BITS_USED)) UUT
+   (.i_Bus_Rst_L(1'b1),
+    .i_Bus_Clk(r_Bus_Clk),
+    .i_Bus_CS(hook.r_Bus_CS),
+    .i_Bus_Wr_Rd_n(hook.r_Bus_Wr_Rd_n),
+    .i_Bus_Addr8(hook.r_Bus_Addr8[3:0]),
+    .i_Bus_Wr_Data(hook.r_Bus_Wr_Data),
+    .o_Bus_Rd_Data(hook.r_Bus_Rd_Data),
+    .o_Bus_Rd_DV(hook.r_Bus_Rd_DV),
+    //
+    .o_AC_Start(),
+    .i_AC_Done(r_Done));
 
   initial
     begin
