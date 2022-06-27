@@ -7,7 +7,6 @@ module Bus_Rd_DPRAM #(DEPTH = 256)
   input         i_Bus_CS,
   input         i_Bus_Wr_Rd_n,
   input [15:0]  i_Bus_Addr8,
-  input [15:0]  i_Bus_Wr_Data,
   output [15:0] o_Bus_Rd_Data,
   output        o_Bus_Rd_DV,
   // Write Interface

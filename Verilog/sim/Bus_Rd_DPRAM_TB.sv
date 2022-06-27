@@ -25,7 +25,6 @@ module Bus_Rd_DPRAM_TB ();
    .i_Bus_CS(hook.r_Bus_CS),
    .i_Bus_Wr_Rd_n(hook.r_Bus_Wr_Rd_n),
    .i_Bus_Addr8(hook.r_Bus_Addr8[15:0]),
-   .i_Bus_Wr_Data(hook.r_Bus_Wr_Data),
    .o_Bus_Rd_Data(hook.r_Bus_Rd_Data),
    .o_Bus_Rd_DV(hook.r_Bus_Rd_DV),
    // Write Interface
