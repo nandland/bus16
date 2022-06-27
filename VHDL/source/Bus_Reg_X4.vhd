@@ -66,7 +66,7 @@ begin
         else
           o_Bus_Rd_DV   <= '1';
           
-          case to_bit(i_Bus_Addr) is
+          case to_bitvector(i_Bus_Addr) is
             when "00" =>
               o_Bus_Rd_Data <= i_Reg_00;
             when "01" =>

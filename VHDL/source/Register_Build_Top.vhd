@@ -59,7 +59,7 @@ begin
       i_Bus_Clk     => i_Clk,
       i_Bus_CS      => w_Bus_CS,
       i_Bus_Wr_Rd_n => w_Bus_Wr_Rd_n,
-      i_Bus_Addr    => w_Bus_Addr,
+      i_Bus_Addr    => w_Bus_Addr(1 downto 0),
       i_Bus_Wr_Data => w_Bus_Wr_Data,
       o_Bus_Rd_Data => w_Bus_Rd_Data,
       o_Bus_Rd_DV   => w_Bus_Rd_DV,
