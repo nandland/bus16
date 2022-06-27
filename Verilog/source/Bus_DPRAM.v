@@ -1,7 +1,7 @@
 // Infers a Dual Port RAM using single clock (Bus Clock)
 // Ties Port A to Bus, port B is available for general use
 
-module Bus_DPRAM #(DEPTH = 256)
+module Bus_DPRAM #(parameter DEPTH = 256)
  (input             i_Bus_Rst_L,
   input             i_Bus_Clk,
   input             i_Bus_CS,

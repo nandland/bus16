@@ -2,7 +2,7 @@
 // Read port is tied to the Bus, bus can only read, not write.
 // Write port can be written by any higher level module
 
-module Bus_Rd_DPRAM #(DEPTH = 256)
+module Bus_Rd_DPRAM #(parameter DEPTH = 256)
  (input         i_Bus_Clk,
   input         i_Bus_CS,
   input         i_Bus_Wr_Rd_n,
